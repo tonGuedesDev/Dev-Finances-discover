@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* buttons and links ============ */
+.button {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: rgb(7, 207, 7);
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(6, 231, 6);
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background-color: rgb(236, 235, 235);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    background-color: rgb(81, 36, 206);
+    height: 12rem;
+}
+
+.header h1 {
+    margin-top: 1rem;
+    color: white;
+    font-weight: normal;
+}
+
+.balances {
+    margin-bottom: 1rem;
+    display: grid;
+}
+
+.balances div {
+    width: 100%;
+}
+/* card ================ */
+
+.card {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.card h3 {
+    font-size: .9rem;
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card h3 span {
+    margin-right: .5rem;
+}
+
+.card h3 img {
+    width: 1.8rem;
+}
+
+.card p {
+    font-size: 1.5rem;
+}
+
+#total {
+    background-color: rgb(7, 207, 7);
+    color: white;
+    font-weight: bold;
+}
+
+#main {
+    margin-top: -5rem;
+}
+
+footer {
+    text-align: center;
+    margin: 1rem 0 ;
+}
+
+/* data-table ======================== */
+.data-table {
+    overflow-x: auto;
+}
+.data-table table{
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    margin-top: .8rem;
+}
+
+.data-table thead th {
+    background-color: rgb(81, 36, 206);
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 1rem;
+    text-align: start;
+}
+
+.data-table tbody tr {
+    
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.data-table td{
+    background-color: white;
+    padding: 1rem;
+    text-transform: capitalize;
+}
+
+table td.income {
+    color: rgb(7, 207, 7);
+}
+
+table td.expense {
+    color: rgb(207, 7, 7);
+}
+
+table td img {
+    width: 1.8rem;
+}
+
+/* LEITOR DE TELA ============ */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* modal-overlay =============== */
+
+.modal-overlay {
+    display: none;
+}
+
+.modal-overlay.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-overlay.active .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 80%;
+    max-width: 500px;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: rgb(121, 121, 121);
+}
+
+#form-modal form input {
+    border: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+#form-modal form input:focus {
+    outline: none;
+}
+
+#form-modal form small {
+    opacity: 0.4;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .6rem;
+}
+
+.input-group.actions button, 
+.input-group.actions a {
+    border: none;
+    padding: 0.8rem;
+    background-color: rgb(7, 207, 7);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    width: 48%;
+    text-align: center;
+}
+
+.input-group.actions a {
+    background-color: rgb(204, 8, 8);
+}
+
+.input-group.actions button:hover {
+    background-color: rgb(6, 231, 6);
+}
+.input-group.actions a:hover {
+    background-color: rgb(219, 14, 14);
+}
+
+#form-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* responsive =============== */
+@media (min-width: 768px) {
+    .balances {
+        grid-template-columns:  repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .card {
+        padding: 2rem 1rem;
+    }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dev.finance$</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/container.css">
+    <link rel="stylesheet" href="./css/grid.css">
+  </head>
+  <body>
+    <header class="header">
+      <h1>
+        <img src="./assets/logo.svg" alt="Logo devFinances">
+      </h1>
+    </header>
+
+    <main id="main" class="container">
+      <section class="balances">
+        <h2 class="sr-only">Balanco</h2>
+
+        <div id="entradas" class="card">
+          <h3>
+            <span>entradas</span>
+            <img src="./assets/income.svg" alt="Valores adicionados">
+          </h3>
+          <p>R$ 0,00</p>
+        </div>
+
+        <div id="saidas" class="card">
+          <h3>
+            <span>saidas</span>
+            <img src="./assets/expense.svg" alt="Valores gastos">
+          </h3>
+          <p>R$ 0,00</p>
+        </div>
+
+        <div id="total" class="card">
+          <h3>
+            <span>total</span>
+            <img src="./assets/total.svg" alt="Dinheiro atual">
+          </h3>
+          <p>R$ 0,00</p>
+        </div>
+      </section>
+
+      <section class="data-table">
+        <div class="transacoes">
+            <h2 class="sr-only">trancacoes</h2>
+
+            <a onclick="Modal.toogle()" href="#" class="button new">
+              + nova transacao
+            </a>
+    
+            <table class="table">
+              <thead>
+                <th>Descricao</th>
+                <th>valor</th>
+                <th>data</th>
+                <th></th>
+              </thead>
+    
+              <tbody>
+                
+              </tbody>
+            </table>
+          </div>
+      </section>
+    </main>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <div id="form-modal">
+          <form action="" onsubmit="Form.submit(event)">
+            <h2>Nova transacao</h2>
+            <div class="input-group">
+              <label class="sr-only" for="description">Descricao</label>
+              <input type="text" name="description" id="description"
+              placeholder="descricao"
+              />
+            </div>
+
+            <div class="input-group">
+
+              <label class="sr-only" for="amount">Valor</label>
+              <input type="number" name="amount" id="amount"
+              placeholder="0,00"
+              step="0.01"
+              />
+
+              <small>
+                Use o sinal de menos (-) para valores negativos. Ex: -20,00
+              </small>
+            </div>
+
+            <div class="input-group">
+              <label class="sr-only" for="date">Data</label>
+              <input type="date" name="date" id="date"
+              />
+            </div>
+
+            <div class="input-group actions">
+              <a onclick="Modal.toogle()" href="#" class="button cancel">Cancelar</a>
+              <button>Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>By rei das cachimbinhas</footer>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
